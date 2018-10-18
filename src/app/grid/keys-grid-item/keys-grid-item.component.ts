@@ -11,7 +11,7 @@ export class KeysGridItemComponent implements OnInit {
   @Input() char: string = 'j';
   row: number = 1;
   col: number = 1;
-  @Input() state: States = States.active;
+  @Input() state: States = States.active; 
 
   // @Output() States:any=Object.assign({},States);
   // public readonly currentStates = States;
