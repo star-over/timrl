@@ -1,3 +1,33 @@
-<p>
-  keys-grid works!
-</p>
+<app-keys-grid-item char='w'></app-keys-grid-item>
+
+<!-- <hr>
+<table>
+    <tr  v-for="row in rows" :key="row.id" >
+      <td  v-for="col in cols" :key="col.id" >
+       <GridKey
+        :id="'r'+ row + 'c' + col"
+        :ref="'r'+ row + 'c' + col"
+        keyChar="A"
+        state="Inactive">
+      </GridKey>
+      </td>
+    </tr>
+</table> -->
+
+<table>
+  <tr *ngFor="let row of [1,2,3,4,5]">
+    <td *ngFor="let col of [1,2,3,4,5,6,7,8,9]">
+      <app-keys-grid-item 
+        [id]='items[ getArrayIndes(row,col) ].getId()' 
+        char='{{items[ getArrayIndes(row,col) ].char}}' 
+        state='{{items[ getArrayIndes(row,col) ].state}}'>
+      </app-keys-grid-item>
+    </td>
+  </tr>
+</table>
+<hr>
+<div class='row'>
+  <div class="col-xs-12">
+    <button class='btn btn-primary' type='submit' (click)='addKey()'>click!</button>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, Injectable } from '@angular/core';
 import { States } from '../../shared/states';
 
 @Component({
@@ -6,25 +6,22 @@ import { States } from '../../shared/states';
   templateUrl: './keys-grid-item.component.html',
   styleUrls: ['./keys-grid-item.component.css']
 })
+
 export class KeysGridItemComponent implements OnInit {
-  id: string = 'r1c1';
-  @Input() char: string = 'j';
-  row: number = 1;
-  col: number = 1;
-  @Input() state: States = States.active; 
+  // @Input() public char: string = 'j';
+  // @Input() public state: States = States.active;
+  @Input() public char = 'j';
+  @Input() public state: States = States.active;
+  public id: string;
+  public row: number;
+  public col: number;
 
-  // @Output() States:any=Object.assign({},States);
-  // public readonly currentStates = States;
 
-
-  constructor() {    
+  constructor() {
    }
 
-  ngOnInit() {
+   ngOnInit() {
   }
-  
-/*   getState(){
-    return States[this.state];
-  } */
+
 
 }
