@@ -1,9 +1,9 @@
 div.keyGridItem {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   color: #5E5E5E;
-  font: bold 30px consolas;
+  font: bold 28px consolas;
   text-decoration: none;
 
   text-align: center;

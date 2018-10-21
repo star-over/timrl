@@ -1,3 +1,6 @@
-<p>
-  keys-grid-arrow works!
-</p>
+<div [ngSwitch]='direction'>
+  <img *ngSwitchCase="sharedDirections.down" src="src/assets/images/arrow-down.png" alt="arrow-down">
+  <img *ngSwitchCase="sharedDirections.up" src="src/assets/images/arrow-up.png" alt="arrow-up">
+  <img *ngSwitchCase="sharedDirections.left" src="src/assets/images/arrow-left.png" alt="arrow-left">
+  <img *ngSwitchCase="sharedDirections.right" src="src/assets/images/arrow-right.png" alt="arrow-right">
+</div>

@@ -1,3 +1,4 @@
+import { Directions } from 'src/app/shared/directions';
 import { KeysGridItemModel } from 'src/app/grid/keys-grid-item/keys-grid-item.model';
 import { Component, OnInit } from '@angular/core';
 import { States } from 'src/app/shared/states';
@@ -9,6 +10,8 @@ import { States } from 'src/app/shared/states';
 })
 export class KeysGridComponent implements OnInit {
   public readonly sharedStates = States;
+
+  public readonly sharedDirections = Directions;
   public readonly rows: number = 5;
 
   items: KeysGridItemModel[] = [];
