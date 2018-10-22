@@ -11,11 +11,11 @@ import { States } from 'src/app/shared/states';
 export class KeysGridItemComponent implements OnInit {
   // @Input() public char: string = 'j';
   // @Input() public state: States = States.active;
-  public readonly sharedDirections = Directions;
+  // public readonly sharedDirections = Directions;
 
   @Input() public char = 'j';
-  @Input() public state: States = States.active;
-  @Input() public direction: Directions = Directions.down;
+  @Input() public state: States = States.inactive;
+  @Input() public direction: Directions = Directions.none;
 
   public id: string;
   public row: number;

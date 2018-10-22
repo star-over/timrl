@@ -11,8 +11,8 @@ export class KeysGridArrowComponent implements OnInit {
   public readonly sharedStates = States;
   public readonly sharedDirections = Directions;
 
-  @Input() public direction: Directions = Directions.up;
-  @Input() public state: States = States.active;
+  @Input() public direction: Directions = Directions.none;
+  @Input() public state: States = States.inactive;
 
   constructor() { }
 

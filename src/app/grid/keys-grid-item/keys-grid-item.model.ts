@@ -1,3 +1,4 @@
+import { Directions } from 'src/app/shared/directions';
 import { States } from 'src/app/shared/states';
 
 export class KeysGridItemModel {
@@ -6,7 +7,8 @@ export class KeysGridItemModel {
     public char: string,
     public row: number,
     public col: number,
-    public state: States
+    public state: States,
+    public direction: Directions
     ) {}
 
     getId() {

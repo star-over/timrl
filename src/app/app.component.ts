@@ -1,3 +1,4 @@
+import { Directions } from './shared/directions';
 import { Component } from '@angular/core';
 import { States } from './shared/states';
 
@@ -9,5 +10,5 @@ import { States } from './shared/states';
 
 export class AppComponent {
   public readonly sharedStates = States;
-
+  public readonly sharedDirections = Directions;
 }
