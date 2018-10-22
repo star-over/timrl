@@ -1,6 +1,6 @@
-<div [ngSwitch]='direction'>
-  <img *ngSwitchCase="sharedDirections.down" src="src/assets/images/arrow-down.png" alt="arrow-down">
-  <img *ngSwitchCase="sharedDirections.up" src="src/assets/images/arrow-up.png" alt="arrow-up">
-  <img *ngSwitchCase="sharedDirections.left" src="src/assets/images/arrow-left.png" alt="arrow-left">
-  <img *ngSwitchCase="sharedDirections.right" src="src/assets/images/arrow-right.png" alt="arrow-right">
+<div  [ngSwitch]='direction'>
+  <img *ngSwitchCase="sharedDirections.down" class='rel-down' src="src/assets/images/arrow-down.png" alt="arrow-down">
+  <img *ngSwitchCase="sharedDirections.up" class='rel-up'src="src/assets/images/arrow-up.png" alt="arrow-up">
+  <img *ngSwitchCase="sharedDirections.left" class='rel-left'src="src/assets/images/arrow-left.png" alt="arrow-left">
+  <img *ngSwitchCase="sharedDirections.right" class='rel-right' src="src/assets/images/arrow-right.png" alt="arrow-right">
 </div>
