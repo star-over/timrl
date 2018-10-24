@@ -1,4 +1,4 @@
-import { VKTypes } from './vkTypes';
+import { VKTypes } from './vk-types';
 import { Fingers } from './fingers';
 import { Hands } from './hands';
 import { VK } from './vk';

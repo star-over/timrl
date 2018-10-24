@@ -1,12 +1,13 @@
 import {Fingers} from './layouts/fingers';
-import {HLItem} from './layouts/hlItem';
+import {HLItem} from './layouts/hl-Item';
 import {HL} from './layouts/hl';
 import {Directions} from './shared/directions';
 import {Component} from '@angular/core';
 import {States} from './shared/states';
 import {Hands} from './layouts/hands';
 import {VK} from './layouts/vk';
-import {VKTypes} from './layouts/vkTypes';
+import {VKTypes} from './layouts/vk-types';
+import { LLItem } from './layouts/ll-items';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ export class AppComponent {
     // console.log(h);
 
     this.loadHL();
+    this.loadLL();
   }
 
   loadHL() {
@@ -103,4 +105,119 @@ export class AppComponent {
     console.log(temproryItems);
   }
 
+  loadLL() {
+    const temproryLLItems: LLItem[] = [
+
+      // Modifiers - None
+      new LLItem(VK.Oem3, 'ё', 0, 0, 0),
+
+
+      new LLItem (VK.D1, '1', 0, 0, 0 ),
+      new LLItem (VK.D2, '2', 0, 0, 0 ),
+      new LLItem (VK.D3, '3', 0, 0, 0 ),
+      new LLItem (VK.D4, '4', 0, 0, 0 ),
+      new LLItem (VK.D5, '5', 0, 0, 0 ),
+      new LLItem (VK.D6, '6', 0, 0, 0 ),
+      new LLItem (VK.D7, '7', 0, 0, 0 ),
+      new LLItem (VK.D8, '8', 0, 0, 0 ),
+      new LLItem (VK.D9, '9', 0, 0, 0 ),
+      new LLItem (VK.D0, '0', 0, 0, 0 ),
+      new LLItem (VK.OemMinus, '-', 0, 0, 0 ), // -_
+      new LLItem (VK.OemPlus, '=', 0, 0, 0 ), //  =+
+
+      new LLItem (VK.Q, 'й', 0, 0, 0 ),
+      new LLItem (VK.W, 'ц', 0, 0, 0 ),
+      new LLItem (VK.E, 'у', 0, 0, 0 ),
+      new LLItem (VK.R, 'к', 0, 0, 0 ),
+      new LLItem (VK.T, 'е', 0, 0, 0 ),
+      new LLItem (VK.Y, 'н', 0, 0, 0 ),
+      new LLItem (VK.U, 'г', 0, 0, 0 ),
+      new LLItem (VK.I, 'ш', 0, 0, 0 ),
+      new LLItem (VK.O, 'щ', 0, 0, 0 ),
+      new LLItem (VK.P, 'з', 0, 0, 0 ),
+      new LLItem (VK.Oem4, 'х', 0, 0, 0 ), //  [(
+      new LLItem (VK.Oem6, 'ъ', 0, 0, 0 ), //  ])
+      new LLItem (VK.Oem5, '\\', 0, 0, 0 ), //  \|
+
+      new LLItem (VK.A, 'ф', 0, 0, 0 ),
+      new LLItem (VK.S, 'ы', 0, 0, 0 ),
+      new LLItem (VK.D, 'в', 0, 0, 0 ),
+      new LLItem (VK.F, 'а', 0, 0, 0 ),
+      new LLItem (VK.G, 'п', 0, 0, 0 ),
+      new LLItem (VK.H, 'р', 0, 0, 0 ),
+      new LLItem (VK.J, 'о', 0, 0, 0 ),
+      new LLItem (VK.K, 'л', 0, 0, 0 ),
+      new LLItem (VK.L, 'д', 0, 0, 0 ),
+      new LLItem (VK.Oem1, 'ж', 0, 0, 0 ), //  ;:
+      new LLItem (VK.Oem7, 'э', 0, 0, 0 ), // '"
+
+      new LLItem (VK.Z, 'я', 0, 0, 0 ),
+      new LLItem (VK.X, 'ч', 0, 0, 0 ),
+      new LLItem (VK.C, 'с', 0, 0, 0 ),
+      new LLItem (VK.V, 'м', 0, 0, 0 ),
+      new LLItem (VK.B, 'и', 0, 0, 0 ),
+      new LLItem (VK.N, 'т', 0, 0, 0 ),
+      new LLItem (VK.M, 'ь', 0, 0, 0 ),
+      new LLItem (VK.OemComma, 'б', 0, 0, 0 ),
+      new LLItem (VK.OemPeriod, 'ю', 0, 0, 0 ),
+      new LLItem (VK.Oem2, '.', 0, 0, 0 ),  // /?
+
+
+      // Modifiers - Shift
+      new LLItem (VK.Oem3, 'Ё', 1, 0, 0 ), // ` ~
+      new LLItem (VK.D1, '!', 1, 0, 0 ),
+      new LLItem (VK.D2, '\u0022', 1, 0, 0 ),
+      new LLItem (VK.D3, '№', 1, 0, 0 ),
+      new LLItem (VK.D4, ';', 1, 0, 0 ),
+      new LLItem (VK.D5, '%', 1, 0, 0 ),
+      new LLItem (VK.D6, ':', 1, 0, 0 ),
+      new LLItem (VK.D7, '?', 1, 0, 0 ),
+      new LLItem (VK.D8, '*', 1, 0, 0 ),
+      new LLItem (VK.D9, '(', 1, 0, 0 ),
+      new LLItem (VK.D0, ')', 1, 0, 0 ),
+      new LLItem (VK.OemMinus, '_', 1, 0, 0 ), // -_
+      new LLItem (VK.OemPlus, '+', 1, 0, 0 ), //  =+
+
+      new LLItem (VK.Q, 'Й', 1, 0, 0 ),
+      new LLItem (VK.W, 'Ц', 1, 0, 0 ),
+      new LLItem (VK.E, 'У', 1, 0, 0 ),
+      new LLItem (VK.R, 'К', 1, 0, 0 ),
+      new LLItem (VK.T, 'Е', 1, 0, 0 ),
+      new LLItem (VK.Y, 'Н', 1, 0, 0 ),
+      new LLItem (VK.U, 'Г', 1, 0, 0 ),
+      new LLItem (VK.I, 'Ш', 1, 0, 0 ),
+      new LLItem (VK.O, 'Щ', 1, 0, 0 ),
+      new LLItem (VK.P, 'З', 1, 0, 0 ),
+      new LLItem (VK.Oem4, 'Х', 1, 0, 0 ), //  [(
+      new LLItem (VK.Oem6, 'Ъ', 1, 0, 0 ), //  ])
+      new LLItem (VK.Oem5, '/', 1, 0, 0 ), //  \|
+
+      new LLItem (VK.A, 'Ф', 1, 0, 0 ),
+      new LLItem (VK.S, 'Ы', 1, 0, 0 ),
+      new LLItem (VK.D, 'В', 1, 0, 0 ),
+      new LLItem (VK.F, 'А', 1, 0, 0 ),
+      new LLItem (VK.G, 'П', 1, 0, 0 ),
+      new LLItem (VK.H, 'Р', 1, 0, 0 ),
+      new LLItem (VK.J, 'О', 1, 0, 0 ),
+      new LLItem (VK.K, 'Л', 1, 0, 0 ),
+      new LLItem (VK.L, 'Д', 1, 0, 0 ),
+      new LLItem (VK.Oem1, 'Ж', 1, 0, 0 ), //  ;:
+      new LLItem (VK.Oem7, 'Э', 1, 0, 0 ), // '"
+
+      new LLItem (VK.Z, 'Я', 1, 0, 0 ),
+      new LLItem (VK.X, 'Ч', 1, 0, 0 ),
+      new LLItem (VK.C, 'С', 1, 0, 0 ),
+      new LLItem (VK.V, 'М', 1, 0, 0 ),
+      new LLItem (VK.B, 'И', 1, 0, 0 ),
+      new LLItem (VK.N, 'Т', 1, 0, 0 ),
+      new LLItem (VK.M, 'Ь', 1, 0, 0 ),
+      new LLItem (VK.OemComma, 'Б', 1, 0, 0 ),
+      new LLItem (VK.OemPeriod, 'Ю', 1, 0, 0 ),
+      new LLItem (VK.Oem2, ',', 1, 0, 0 ),  // /?
+      new LLItem (VK.Space, ' ', 0, 0, 0 ),  // Space
+
+    ];
+
+    console.log(temproryLLItems);
+  }
 }

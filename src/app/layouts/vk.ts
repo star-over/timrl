@@ -1,4 +1,8 @@
 export enum VK {
+  /**
+   * ( `~ )
+   */
+  Oem3 = 0x29,
   D1 = 0x02,
   D2 = 0x03,
   D3 = 0x04,
@@ -9,7 +13,13 @@ export enum VK {
   D8 = 0x09,
   D9 = 0x0a,
   D0 = 0x0b,
+  /**
+   * Minus and underscore(-_)
+   */
   OemMinus = 0x0c,
+  /**
+   * Eqals and Plus (=+)
+   */
   OemPlus = 0x0d,
   Q = 0x10,
   W = 0x11,
@@ -21,7 +31,13 @@ export enum VK {
   I = 0x17,
   O = 0x18,
   P = 0x19,
+  /**
+   * brackets ( [{ )
+   */
   Oem4 = 0x1a,
+  /**
+   * brackets ( ]} )
+   */
   Oem6 = 0x1b,
   A = 0x1e,
   S = 0x1f,
@@ -32,9 +48,18 @@ export enum VK {
   J = 0x24,
   K = 0x25,
   L = 0x26,
+  /**
+   * ( ;: )
+   */
   Oem1 = 0x27,
+  /**
+   * ( '" )
+   */
   Oem7 = 0x28,
-  Oem3 = 0x29,
+
+  /**
+   * ( \| )
+   */
   Oem5 = 0x2b,
   Z = 0x2c,
   X = 0x2d,
@@ -43,8 +68,17 @@ export enum VK {
   B = 0x30,
   N = 0x31,
   M = 0x32,
+  /**
+   * ( ,< )
+   */
   OemComma = 0x33,
+  /**
+   * ( .> )
+   */
   OemPeriod = 0x34,
+  /**
+   * ( /? )
+   */
   Oem2 = 0x35,
   Space = 0x39,
   RightSpace = 0x139, // добавлен. к основному номеру добавлено 0х100

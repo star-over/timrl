@@ -1,4 +1,4 @@
-import { HLItem } from './hlItem';
+import { HLItem } from './hl-Item';
 /**
  Singleton котрый содержит информацию о текущей раскладке
  клавиатуры. Так как в каждый момент доступна только одна клавиатура. В массиве <code>movements</code>
