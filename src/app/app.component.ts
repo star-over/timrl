@@ -1,30 +1,12 @@
-import {
-  Fingers
-} from './layouts/fingers';
-import {
-  HLItem
-} from './layouts/hlItem';
-import {
-  HL
-} from './layouts/hl';
-import {
-  Directions
-} from './shared/directions';
-import {
-  Component
-} from '@angular/core';
-import {
-  States
-} from './shared/states';
-import {
-  Hands
-} from './layouts/hands';
-import {
-  VK
-} from './layouts/vk';
-import {
-  VKTypes
-} from './layouts/vkTypes';
+import {Fingers} from './layouts/fingers';
+import {HLItem} from './layouts/hlItem';
+import {HL} from './layouts/hl';
+import {Directions} from './shared/directions';
+import {Component} from '@angular/core';
+import {States} from './shared/states';
+import {Hands} from './layouts/hands';
+import {VK} from './layouts/vk';
+import {VKTypes} from './layouts/vkTypes';
 
 @Component({
   selector: 'app-root',
