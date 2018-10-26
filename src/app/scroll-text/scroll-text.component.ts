@@ -12,4 +12,15 @@ export class ScrollTextComponent implements OnInit {
   ngOnInit() {
   }
 
+  doKeypress(event: Event) {
+    console.log(event.key);
+  }
+  doFocus() {
+    console.log('set focus');
+  }
+
+  doLostFocus() {
+    console.log('lost focus');
+  }
+
 }

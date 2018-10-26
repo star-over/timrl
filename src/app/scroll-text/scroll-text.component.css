@@ -1,0 +1,16 @@
+span.west {
+  width: 50%; 
+  text-align: right; 
+  white-space: nowrap;
+}
+
+span.east{
+  width: 50%; 
+  border-left :2px 
+  solid black; 
+  white-space: nowrap;
+}
+
+div.border{
+  border :2px solid black;
+}
