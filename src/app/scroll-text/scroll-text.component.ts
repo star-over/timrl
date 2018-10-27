@@ -24,12 +24,12 @@ export class ScrollTextComponent implements OnInit {
       this.moveCharToOut();
 
     } else {
+
+
       console.log('eroor input char');
     }
 
     console.log((<KeyboardEvent>event).key);
-
-
   }
 
   moveCharToOut() {
