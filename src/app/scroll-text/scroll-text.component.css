@@ -1,16 +1,27 @@
-span.west {
+.west {
   width: 50%; 
   text-align: right; 
   white-space: nowrap;
 }
 
-span.east{
+.east{
   width: 50%; 
-  border-left :2px 
-  solid black; 
+  border-left :2px solid transparent; 
   white-space: nowrap;
 }
 
 div.border{
   border :2px solid black;
+}
+
+@-webkit-keyframes blink { 
+  50% { border-color: black; } 
+}
+@keyframes blink { 
+  50% { border-color: black; } 
+}
+
+.blink {
+   animation: blink .5s step-end infinite alternate;
+   -webkit-animation: blink .5s step-end infinite alternate;
 }

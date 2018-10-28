@@ -6,21 +6,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scroll-text.component.css']
 })
 export class ScrollTextComponent implements OnInit {
+  inputString: string;
+  outString: string;
+  blink = false;
+
+  nbSp = '\u00A0';
+  brSp = '\u0020';
 
   constructor() { }
 
-  inputString: string;
-  outString: string;
-
   ngOnInit() {
-    this.inputString = 'first test string';
+
+    this.inputString = 'first test string and we need typing any more.';
     this.outString = 'test out string';
+
+    // заменяем все пробелы на неразрывные пробелы, чтобы они нормально отображались в начале и конце лейбла
+    this.inputString = this.replaceBrspToNonBrsp(this.inputString);
+
+  }
+/**
+ * заменяем все обычные пробелы на неразрывные пробелы,
+ * чтобы они нормально отображались в начале и конце лейбла
+ * @param str Cтрока в которой надо заменить обычные пробелы
+ * @returns  Строка с неразрывными пробелами
+ */
+replaceBrspToNonBrsp(str: string) {
+    return str.split(this.brSp).join(this.nbSp);
   }
 
   doKeypress(event: Event) {
     const pressedChar: string = (<KeyboardEvent>event).key;
+    let isPressedOK: boolean;
+    isPressedOK = false;
 
-    if (pressedChar === this.getTargetChar()) {
+    if (( this.getTargetChar() === this.nbSp) && (pressedChar === this.brSp)) {
+      isPressedOK = true;
+    }
+
+    if ((isPressedOK) || (pressedChar === this.getTargetChar())) {
       this.moveCharToOut();
 
     } else {
@@ -43,8 +66,8 @@ export class ScrollTextComponent implements OnInit {
 
   doFocus() {
     console.log('set focus');
-    console.log(this.getTargetChar());
-
+    console.log(this.getTargetChar().charCodeAt(0));
+    this.blink = true;
     // TODO Start statistic
     // TODO Start timer
     // TODO start input in 3 sec
@@ -52,9 +75,11 @@ export class ScrollTextComponent implements OnInit {
 
   doLostFocus() {
     console.log('lost focus');
+    this.blink = false;
     // TODO Pause statistic
     // TODO Pause timer
     // TODO lock input
   }
 
+  // TODO левый лейбл не уходит за левый край, надо чтобы уходил далеко за границу
 }
