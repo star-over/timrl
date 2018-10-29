@@ -2,12 +2,14 @@
   width: 50%; 
   text-align: right; 
   white-space: nowrap;
+  direction: rtl;
 }
 
 .east{
   width: 50%; 
   border-left :2px solid transparent; 
   white-space: nowrap;
+
 }
 
 div.border{
@@ -24,4 +26,8 @@ div.border{
 .blink {
    animation: blink .5s step-end infinite alternate;
    -webkit-animation: blink .5s step-end infinite alternate;
+}
+
+strong {
+  color: red;
 }

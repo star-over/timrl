@@ -64,8 +64,9 @@ replaceBrspToNonBrsp(str: string) {
     this.inputString = this.inputString.substr(1);
   }
 
-  getTargetChar() {
-    return this.inputString[0];
+  getTargetChar(): string {
+
+    return this.inputString.length > 0 ? this.inputString[0] : '';
   }
 
   doFocus() {

@@ -10,6 +10,7 @@
   (blur)='doLostFocus($event)' >
   <div class='row border'>
       <span class='west' [innerHTML]='outString'></span>
+
       <span class='east' [ngClass]="{'blink': blink}">{{inputString}}</span>
   </div>
 
