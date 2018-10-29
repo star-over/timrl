@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scroll-text.component.css']
 })
 export class ScrollTextComponent implements OnInit {
-  inputString: string;
-  outString: string;
+  inputString = 'first test string and we need typing any more.';
+  outString = 'test <strong>err</strong> string';
   blink = false;
+  wasError = false;
 
   nbSp = '\u00A0';
   brSp = '\u0020';
@@ -17,8 +18,6 @@ export class ScrollTextComponent implements OnInit {
 
   ngOnInit() {
 
-    this.inputString = 'first test string and we need typing any more.';
-    this.outString = 'test out string';
 
     // заменяем все пробелы на неразрывные пробелы, чтобы они нормально отображались в начале и конце лейбла
     this.inputString = this.replaceBrspToNonBrsp(this.inputString);
@@ -45,10 +44,11 @@ replaceBrspToNonBrsp(str: string) {
 
     if ((isPressedOK) || (pressedChar === this.getTargetChar())) {
       this.moveCharToOut();
+      this.wasError = false;
 
     } else {
 
-
+      this.wasError = true;
       console.log('eroor input char');
     }
 
@@ -56,7 +56,11 @@ replaceBrspToNonBrsp(str: string) {
   }
 
   moveCharToOut() {
-    this.outString  += this.inputString[0];
+    if (this.wasError) {
+      this.outString  = this.outString  + '<strong>' + this.inputString[0] + '</strong>';
+    } else {
+      this.outString  += this.inputString[0];
+    }
     this.inputString = this.inputString.substr(1);
   }
 
