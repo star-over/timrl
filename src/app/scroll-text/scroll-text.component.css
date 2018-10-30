@@ -1,21 +1,3 @@
-.west {
-  width: 50%; 
-  text-align: right; 
-  white-space: nowrap;
-  direction: rtl;
-}
-
-.east{
-  width: 50%; 
-  border-left :2px solid transparent; 
-  white-space: nowrap;
-
-}
-
-div.border{
-  border :2px solid black;
-}
-
 @-webkit-keyframes blink { 
   50% { border-color: black; } 
 }
@@ -26,6 +8,48 @@ div.border{
 .blink {
    animation: blink .5s step-end infinite alternate;
    -webkit-animation: blink .5s step-end infinite alternate;
+}
+
+
+.border-box{
+  border: 1px solid goldenrod;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  width: 100%;
+  height: 30px
+
+}
+.left{  
+  width: 50%;
+
+  /* background-color: chartreuse; */
+  overflow: hidden;
+  white-space: nowrap;
+  /* display: flex; */
+  }
+.right {
+  border-left :2px solid transparent; 
+  width: 50%;
+  height: 100%;
+  /* background-color: crimson; */
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+.outer-div {
+  /* width: 100%; */
+  height: 100%;
+  /* border: 1px solid red; */
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-div {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
 }
 
 strong {

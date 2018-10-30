@@ -1,17 +1,15 @@
-<p>
-  scroll-text works!
-</p>
-
 <div 
   class="focus-panel" 
   tabindex="0" 
   (keypress)='doKeypress($event)' 
   (focus)='doFocus($event)' 
   (blur)='doLostFocus($event)' >
-  <div class='row border'>
-      <span class='west' [innerHTML]='outString'></span>
-
-      <span class='east' [ngClass]="{'blink': blink}">{{inputString}}</span>
-  </div>
-
+  <div class='border-box'>
+      <div class="left">
+        <div class="outer-div">
+          <span class="inner-div" [innerHTML]='outString'></span>
+        </div>
+      </div>
+      <span class="right" [ngClass]="{'blink': blink}">{{inputString}}</span>
+    </div>
 </div>

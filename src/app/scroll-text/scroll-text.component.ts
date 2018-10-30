@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scroll-text.component.css']
 })
 export class ScrollTextComponent implements OnInit {
-  inputString = 'first test string and we need typing any more.';
-  outString = 'test <strong>err</strong> string';
+  inputString = 'hellow hellow!';
+  outString = 'test <strong>err</strong> string and te long long long textus';
   blink = false;
   wasError = false;
 
