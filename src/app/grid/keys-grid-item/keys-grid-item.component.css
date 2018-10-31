@@ -1,9 +1,11 @@
+
 div.keyGridItem {
   display: inline-block;
   height: 40px;
   width: 40px;
   color: #5E5E5E;
-  font: bold 28px consolas;
+  font-size:  28px;
+  font-family: 'Ubuntu Mono', 'consolas', monospace;
   text-decoration: none;
 
   text-align: center;

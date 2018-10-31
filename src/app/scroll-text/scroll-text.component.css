@@ -1,3 +1,4 @@
+
 @-webkit-keyframes blink { 
   50% { border-color: black; } 
 }
@@ -54,4 +55,44 @@
 
 strong {
   color: red;
+}
+/* ------------ */
+
+div {
+  width: 100%;
+  font-size: 30px;
+  /* font: 28px consolas; */
+  height: 40px;
+  border: 1px solid peru;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Ubuntu Mono', 'consolas', monospace;
+}
+
+/* div::before,
+div::after {
+  content: '...';
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  z-index: 2;
+}
+
+div::after {
+  right: 0;
+} */
+
+div span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 60%;
+  white-space: nowrap;
+}
+
+div span:nth-child(2) {
+  position: absolute;
+  border-left :2px solid transparent; 
+  top: 0;
+  left: 40%;
+  white-space: nowrap;
 }

@@ -4,12 +4,6 @@
   (keypress)='doKeypress($event)' 
   (focus)='doFocus($event)' 
   (blur)='doLostFocus($event)' >
-  <div class='border-box'>
-      <div class="left">
-        <div class="outer-div">
-          <span class="inner-div" [innerHTML]='outString'></span>
-        </div>
-      </div>
-      <span class="right" [ngClass]="{'blink': blink}">{{inputString}}</span>
-    </div>
+  <span [innerHTML]='outString'></span>
+  <span [ngClass]="{'blink': blink}" [innerHTML]='inputString'></span>
 </div>
