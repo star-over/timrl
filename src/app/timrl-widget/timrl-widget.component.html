@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <app-scroll-text></app-scroll-text>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <app-keys-grid></app-keys-grid>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <app-keys-grid-item char='w' [direction]='sharedDirections.right'></app-keys-grid-item>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-keys-grid-arrow [direction]='sharedDirections.up'></app-keys-grid-arrow>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <button class='btn btn-primary' type='submit' (click)='doClick()'>click!</button>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import { KeysGridArrowComponent } from './grid/keys-grid-arrow/keys-grid-arrow.c
 import { HandComponent } from './hand/hand/hand.component';
 import { HandItemComponent } from './hand/hand-item/hand-item.component';
 import { ScrollTextComponent } from './scroll-text/scroll-text.component';
+import { TimrlWidgetComponent } from './timrl-widget/timrl-widget.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ScrollTextComponent } from './scroll-text/scroll-text.component';
     KeysGridArrowComponent,
     HandComponent,
     HandItemComponent,
-    ScrollTextComponent
+    ScrollTextComponent,
+    TimrlWidgetComponent
   ],
   imports: [
     BrowserModule
