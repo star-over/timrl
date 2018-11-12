@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScrollTextComponent implements OnInit {
   inputString = 'hellow hellow!';
-  outString = 'test <strong>err</strong> string and te long long long textus';
+  outString = 'test err string and te long long <strong>long</strong> textus';
   blink = false;
   wasError = false;
 
@@ -57,7 +57,7 @@ replaceBrspToNonBrsp(str: string) {
 
   moveCharToOut() {
     if (this.wasError) {
-      this.outString  = this.outString  + '<strong>' + this.inputString[0] + '</strong>';
+      this.outString  = this.outString  + '<strong id="err">' + this.inputString[0] + '</strong>';
     } else {
       this.outString  += this.inputString[0];
     }
