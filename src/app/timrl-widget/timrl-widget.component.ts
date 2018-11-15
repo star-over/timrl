@@ -1,3 +1,4 @@
+import { LL } from './../layouts/ll';
 import { Component, OnInit } from '@angular/core';
 import { States } from '../shared/states';
 import { Directions } from '../shared/directions';
@@ -21,16 +22,6 @@ export class TimrlWidgetComponent implements OnInit {
   constructor() { }
 
   doClick() {
-    const h = HL.getInstance();
-    h.name = 'hl name';
-    h.version = 55;
-
-    const hlitem = new HLItem(VK.W, Hands.Left, Fingers.F1, -1, 1, VKTypes.normal);
-
-    h.items.push(hlitem);
-
-    // console.log(h);
-
     this.loadHL();
     this.loadLL();
   }
@@ -38,6 +29,10 @@ export class TimrlWidgetComponent implements OnInit {
   loadHL() {
 
     // TODO Вынести в отдельный сервис
+
+    const h = HL.getInstance();
+    h.name = 'hl name';
+    h.version = 55;
     const temproryItems: HLItem[] = [
 
       new HLItem(VK.Oem3, Hands.Left, Fingers.F4, -1, 2, VKTypes.normal),
@@ -104,11 +99,21 @@ export class TimrlWidgetComponent implements OnInit {
       new HLItem(VK.Alt, Hands.Left, Fingers.F0, -1, 0, VKTypes.extra),
       new HLItem(VK.RightAlt, Hands.Right, Fingers.F0, 1, 0, VKTypes.extra),
     ];
-    console.log(temproryItems);
+
+    h.items = temproryItems;
+
+    console.log(h.items);
   }
 
   loadLL() {
     // TODO Вынести в отдельный сервис
+
+    const l = LL.getInstance();
+    l.language = 'Russian-409';
+    l.layoutName = 'Russian';
+    l.version = 0;
+    l.id = 'ru-RU';
+
     const temproryLLItems: LLItem[] = [
 
       // Modifiers - None
@@ -221,7 +226,8 @@ export class TimrlWidgetComponent implements OnInit {
 
     ];
 
-    console.log(temproryLLItems);
+    l.items = temproryLLItems;
+    console.log(l.items);
   }
   ngOnInit() {
   }
