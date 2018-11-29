@@ -1,7 +1,7 @@
 import { Directions } from 'src/app/shared/directions';
 import { States } from 'src/app/shared/states';
 
-export class KeysGridItemModel {
+export class KeysGridItem {
 
   constructor(
     public char: string,

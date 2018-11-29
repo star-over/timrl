@@ -4,8 +4,8 @@ export class LLItem {
   constructor(
     public vk: VK,
     public char: string,
-    public alt: number,
+    public shift: number,
     public ctrl: number,
-    public shift: number
+    public alt: number
     ) {}
 }
