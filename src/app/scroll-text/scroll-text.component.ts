@@ -12,6 +12,8 @@ import { Directions } from 'src/app/shared/directions';
   templateUrl: './scroll-text.component.html',
   styleUrls: ['./scroll-text.component.css']
 })
+
+// the test
 export class ScrollTextComponent implements OnInit {
   inputString = 'Л привет, привет!';
   outString =
