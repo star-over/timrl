@@ -10,6 +10,20 @@ import { HandItemComponent } from './hand/hand-item/hand-item.component';
 import { ScrollTextComponent } from './scroll-text/scroll-text.component';
 import { TimrlWidgetComponent } from './timrl-widget/timrl-widget.component';
 
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDZD7a7rMlX-wCHX2i9Ii8Q2DDiQ3yNoTo",
+  authDomain: "timrl-fb.firebaseapp.com",
+  databaseURL: "https://timrl-fb.firebaseio.com",
+  projectId: "timrl-fb",
+  storageBucket: "timrl-fb.appspot.com",
+  messagingSenderId: "504421620119",
+  appId: "1:504421620119:web:be21b3fada075ff3a08cd2",
+  measurementId: "G-D9GNSYYYEP"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +36,8 @@ import { TimrlWidgetComponent } from './timrl-widget/timrl-widget.component';
     TimrlWidgetComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
     BrowserModule
   ],
   providers: [],

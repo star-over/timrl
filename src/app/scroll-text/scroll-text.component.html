@@ -2,8 +2,8 @@
   class="focus-panel" 
   tabindex="0" 
   (keypress)='doKeypress($event)' 
-  (focus)='doFocus($event)' 
-  (blur)='doLostFocus($event)' >
+  (focus)='doFocus()' 
+  (blur)='doLostFocus()' >
   <span [innerHTML]='outString'></span>
   <span [ngClass]="{'blink': blink}" [innerHTML]='inputString'></span>
 </div>
