@@ -22,6 +22,8 @@ export class TimrlWidgetComponent implements OnInit {
   constructor() { }
 
   doClick() {
+    console.log('----------');
+    
     this.loadHL();
     this.loadLL();
   }
@@ -102,7 +104,9 @@ export class TimrlWidgetComponent implements OnInit {
 
     h.items = temproryItems;
 
-    console.log(h.items);
+    console.log([h.items]);
+    
+    
   }
 
   loadLL() {

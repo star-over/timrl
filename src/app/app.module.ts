@@ -10,10 +10,14 @@ import { HandItemComponent } from './hand/hand-item/hand-item.component';
 import { ScrollTextComponent } from './scroll-text/scroll-text.component';
 import { TimrlWidgetComponent } from './timrl-widget/timrl-widget.component';
 
+
+
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDZD7a7rMlX-wCHX2i9Ii8Q2DDiQ3yNoTo",
   authDomain: "timrl-fb.firebaseapp.com",
   databaseURL: "https://timrl-fb.firebaseio.com",
@@ -33,7 +37,8 @@ var firebaseConfig = {
     HandComponent,
     HandItemComponent,
     ScrollTextComponent,
-    TimrlWidgetComponent
+    TimrlWidgetComponent,
+    UserProfileComponent
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),
